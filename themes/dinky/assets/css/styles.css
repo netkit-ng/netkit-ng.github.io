@@ -138,6 +138,10 @@ hr {
   margin:0 0 24px;
 }
 
+.entry-title a {
+  color: #232323;
+}
+
 /* Images */
 
 img {
@@ -212,7 +216,7 @@ td {
 
 /* Header */
 
-header {
+#main-header {
 	background-color: #171717;
 	color: #FDFDFB;
   width:170px;
@@ -230,11 +234,11 @@ header {
 	-webkit-font-smoothing: antialiased;
 }
 
-p.header {
+#main-header p.header {
 	font-size: 16px;
 }
 
-h1.header {
+#main-header h1.header {
 	font-family: Arvo, sans-serif;
 	font-size: 30px;
 	font-weight: 300;
@@ -243,8 +247,7 @@ h1.header {
 	margin-top: 0;
 }
 
-
-h1.header, a.header, a.name, header a{
+#main-header h1.header, #main-header a.header, #main-header a.github {
 	color: #fff;
 }
 
@@ -312,7 +315,6 @@ a.buttons:hover {
 	color: #fff;
 	text-decoration: none;
 }
-
 
 /* Section - for main page content */
 
