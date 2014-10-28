@@ -1,4 +1,4 @@
-.. title: Homepage.
+.. title: Netkit-NG Homepage
 .. slug: index
 .. date: 2013/03/01 10:26:17
 .. tags:
@@ -6,27 +6,115 @@
 .. description:
 .. type: markdown
 
-This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:
+## What is Netkit-NG
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+Netkit-NG is a fork of [the Netkit project](http://www.netkit.org/) to bring 
+new functionnalities and support for recent debian kernels and filesystems. It 
+includes an updated version of `netkit-core` which supports the new fs image 
+format and includes other contributions released by various github users.
 
-If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.
+## What is the differences between Netkit-NG and Netkit ?
 
-## Designer Templates
+Netkit-NG:
 
-We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.
+* filesystem and kernel based on Debian Wheezy
+* uml_dump support (UML network sniffer without root rights)
+* The FS and kernel can be rebuild: adding / removing packages and change kernel options are possible
 
-## Rather Drive Stick?
+Netkit:
 
-If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
+* filesystem and kernel based on Debian lenny (deprected since 02/2012)
+* stable since a long time
+* includes MPLS patches
 
-## Authors and Contributors
+## Latest version
 
-You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.
+If you're interested on "ready-to-use" binaries, please install:
 
-## Support or Contact
+* The netkit-NG core version 3.0.3: [netkit-ng-core-32-3.0.3.tar.bz2](https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.3/netkit-ng-core-32-3.0.3.tar.bz2)
+* The Netkit-NG filesystem version 7.0: [netkit-ng-filesystem-i386-F7.0.tar.bz2](https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-filesystem-i386-F7.0.tar.bz2)
+* The Netkit-NG kernel version 3.2: [netkit-ng-kernel-i386-K3.2.tar.bz2](https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-kernel-i386-K3.2.tar.bz2)
 
-Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.
+## Installing Netkit-NG
+
+A complete Netkit-NG distribution consists of three different packages:
+* the Netkit-NG "core", which contains commands, documentation and other stuff
+  which is necessary for Netkit to work;
+* the Netkit-NG filesystem, which contains the filesystem for virtual machines;
+* the Netkit-NG kernel, which contains the kernel used by virtual machines.
+
+### Step 1: Download and unpack
+
+Download all the files to the same directory of your choice. Then unpack them by using the following commands:
+
+<pre>
+  tar -xjSf netkit-ng-core-32-3.0.2.tar.bz2
+  tar -xjSf netkit-ng-filesystem-i386-F7.0.tar.bz2
+  tar -xjSf netkit-ng-kernel-i386-K3.2.tar.bz2
+</pre>
+
+
+### Step2: Configuration
+
+The first step is to set the environment variables:
+
+* `NETKIT_HOME` variable to the name of the directory Netkit has been installed into. 
+* `MANPATH` variable must be set to `$NETKIT_HOME/man`
+* `PATH` environment variable must include `$NETKIT_HOME/bin`
+
+The simplest way to do it is to run the check configuration script and copy/paste the recommandations. Run the `check_configuration.sh' script in the `netkit-ng` directory by typing:
+
+<pre>
+  ./check_configuration.sh
+</pre>
+
+This script takes care of checking whether your system is configured properly to make Netkit run. Any misconfigurations are signalled and instructions for fixing them are reported as well. If the script exits with success, then Netkit is ready for use.
+
+## Changes
+
+* Version 3.0.3
+  
+    * Fix #3: check-configuration script returns warning about parse file not supported on ext4
+    * force `LANG_C` to all scripts to avoid internationalization errors
+    * Fix #4: Missing dynamic library dependency when calling vhalt
+    * Add tests to check if filesystem supports sparse file for FS and model FS
+
+* Version 3.0.2
+
+    * archive name and directory start with netkit-ng to avoid clash with original netkit
+
+* Version 3.0.1
+
+    * fixing error during `README.mdown` copy into archive during build
+
+* Version 3.0
+
+    * switching to new major version, as scripts are now expecting new fs organization
+    * moving console profile to tools directory
+
+* Version 2.12
+
+    * uml tools patches are included in git from now
+    * moving to new root filesystem from netkit-uml-build
+
+* Version 2.11
+
+    * It is now possible to run only bin/manage_tuntap script via sudo, not /bin/sh. (sv75)
+
+* Version 2.10
+
+    * support for 32 and 64 bits architecture for UML tools
+    * add binary check during check_configuration.d (to detect problem when the user install the wrong version of netkit in respect of his host architecture).
+
+* Version 2.9
+
+    * renaming vconfig to vconf (zioproto)
+    * support for connection mconsole (babazka)
+    * support for vdump (via uml_dump): small utility to connect wireshark or tcpdump directly to a uml_switch
+    * add Ktabstart, a tool to run netkit session within konsole tabs (sv75)
+    * for developpers:
+        * better looking excludes in Makefile (Markus Stenberg)
+        * sources of the uml tools are in src/ directory and patches are applied during build
+        * removing previous uml tools binaries
+        * removing obsolete goals in Makefile
+
