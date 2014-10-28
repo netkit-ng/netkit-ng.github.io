@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header id="main-header">
-        <h1 class="header">Netkit-ng</h1>
+        <h1 class="header">Netkit-ng</h1> 
         <p class="header">Netkit reloaded</p>
         <ul>
           <li><a class="buttons github" href="https://github.com/netkit-ng">GitHub Profile</a></li>
@@ -27,28 +27,140 @@
 <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
     <header>
         
-    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Homepage.</a></h1>
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Netkit-NG Homepage</a></h1>
 
         
 
     </header>
     <div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h3>What is Netkit-NG</h3>
+<p>Netkit-NG is a fork of <a href="http://www.netkit.org/">the Netkit project</a> to bring 
+new functionnalities and support for recent debian kernels and filesystems. It 
+includes an updated version of <code>netkit-core</code> which supports the new fs image 
+format and includes other contributions released by various github users.</p>
+<h3>What is the differences between Netkit-NG and Netkit ?</h3>
+<p>Netkit-NG:</p>
+<ul>
+<li>filesystem and kernel based on Debian Wheezy</li>
+<li>uml_dump support (UML network sniffer without root rights)</li>
+<li>The FS and kernel can be rebuild: adding / removing packages and change kernel options are possible</li>
+</ul>
+<p>Netkit:</p>
+<ul>
+<li>filesystem and kernel based on Debian lenny (deprected since 02/2012)</li>
+<li>stable since a long time</li>
+<li>includes MPLS patches</li>
+</ul>
+<h3>Latest version</h3>
+<p>If you're interested on "ready-to-use" binaries, please install:</p>
+<ul>
+<li>The netkit-NG core version 3.0.3: <a href="https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.3/netkit-ng-core-32-3.0.3.tar.bz2">netkit-ng-core-32-3.0.3.tar.bz2</a>
+</li>
+<li>The Netkit-NG filesystem version 7.0: <a href="https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-filesystem-i386-F7.0.tar.bz2">netkit-ng-filesystem-i386-F7.0.tar.bz2</a>
+</li>
+<li>The Netkit-NG kernel version 3.2: <a href="https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-kernel-i386-K3.2.tar.bz2">netkit-ng-kernel-i386-K3.2.tar.bz2</a>
+</li>
+</ul>
+<h3>Installing Netkit-NG</h3>
+<p>A complete Netkit-NG distribution consists of three different packages:
+<em> the Netkit-NG "core", which contains commands, documentation and other stuff
+  which is necessary for Netkit to work;
+</em> the Netkit-NG filesystem, which contains the filesystem for virtual machines;
+* the Netkit-NG kernel, which contains the kernel used by virtual machines.</p>
+<h4>Step 1: Download and unpack</h4>
+<p>Download all the files to the same directory of your choice. Then unpack them by using the following commands:</p>
+<pre>
+  tar -xjSf netkit-ng-core-32-3.0.2.tar.bz2
+  tar -xjSf netkit-ng-filesystem-i386-F7.0.tar.bz2
+  tar -xjSf netkit-ng-kernel-i386-K3.2.tar.bz2
+</pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-<h3>Designer Templates</h3>
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-<h3>Rather Drive Stick?</h3>
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-<h3>Authors and Contributors</h3>
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-<h3>Support or Contact</h3>
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h4>Step2: Configuration</h4>
+<p>The first step is to set the environment variables:</p>
+<ul>
+<li>
+<code>NETKIT_HOME</code> variable to the name of the directory Netkit has been installed into. </li>
+<li>
+<code>MANPATH</code> variable must be set to <code>$NETKIT_HOME/man</code>
+</li>
+<li>
+<code>PATH</code> environment variable must include <code>$NETKIT_HOME/bin</code>
+</li>
+</ul>
+<p>The simplest way to do it is to run the check configuration script and copy/paste the recommandations. Run the <code>check_configuration.sh' script in the</code>netkit-ng` directory by typing:</p>
+<pre>
+  ./check_configuration.sh
+</pre>
+
+<p>This script takes care of checking whether your system is configured properly to make Netkit run. Any misconfigurations are signalled and instructions for fixing them are reported as well. If the script exits with success, then Netkit is ready for use.</p>
+<h3>Changes</h3>
+<ul>
+<li>
+<p>Version 3.0.3</p>
+<ul>
+<li>Fix #3: check-configuration script returns warning about parse file not supported on ext4</li>
+<li>force <code>LANG_C</code> to all scripts to avoid internationalization errors</li>
+<li>Fix #4: Missing dynamic library dependency when calling vhalt</li>
+<li>Add tests to check if filesystem supports sparse file for FS and model FS</li>
+</ul>
+</li>
+<li>
+<p>Version 3.0.2</p>
+<ul>
+<li>archive name and directory start with netkit-ng to avoid clash with original netkit</li>
+</ul>
+</li>
+<li>
+<p>Version 3.0.1</p>
+<ul>
+<li>fixing error during <code>README.mdown</code> copy into archive during build</li>
+</ul>
+</li>
+<li>
+<p>Version 3.0</p>
+<ul>
+<li>switching to new major version, as scripts are now expecting new fs organization</li>
+<li>moving console profile to tools directory</li>
+</ul>
+</li>
+<li>
+<p>Version 2.12</p>
+<ul>
+<li>uml tools patches are included in git from now</li>
+<li>moving to new root filesystem from netkit-uml-build</li>
+</ul>
+</li>
+<li>
+<p>Version 2.11</p>
+<ul>
+<li>It is now possible to run only bin/manage_tuntap script via sudo, not /bin/sh. (sv75)</li>
+</ul>
+</li>
+<li>
+<p>Version 2.10</p>
+<ul>
+<li>support for 32 and 64 bits architecture for UML tools</li>
+<li>add binary check during check_configuration.d (to detect problem when the user install the wrong version of netkit in respect of his host architecture).</li>
+</ul>
+</li>
+<li>
+<p>Version 2.9</p>
+<ul>
+<li>renaming vconfig to vconf (zioproto)</li>
+<li>support for connection mconsole (babazka)</li>
+<li>support for vdump (via uml_dump): small utility to connect wireshark or tcpdump directly to a uml_switch</li>
+<li>add Ktabstart, a tool to run netkit session within konsole tabs (sv75)</li>
+<li>for developpers:<ul>
+<li>better looking excludes in Makefile (Markus Stenberg)</li>
+<li>sources of the uml tools are in src/ directory and patches are applied during build</li>
+<li>removing previous uml tools binaries</li>
+<li>removing obsolete goals in Makefile</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
     </div>
     
