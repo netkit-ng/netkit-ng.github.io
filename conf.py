@@ -115,7 +115,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "dinky"
+THEME = "netkit"
 
 # Below this point, everything is optional
 
