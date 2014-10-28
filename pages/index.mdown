@@ -31,7 +31,7 @@ Netkit:
 
 If you're interested on "ready-to-use" binaries, please install:
 
-* The netkit-NG core version 3.0.3: [netkit-ng-core-32-3.0.3.tar.bz2](https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.3/netkit-ng-core-32-3.0.3.tar.bz2)
+* The netkit-NG core version 3.0.4: [netkit-ng-core-32-3.0.4.tar.bz2](https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.4/netkit-ng-core-32-3.0.4.tar.bz2)
 * The Netkit-NG filesystem version 7.0: [netkit-ng-filesystem-i386-F7.0.tar.bz2](https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-filesystem-i386-F7.0.tar.bz2)
 * The Netkit-NG kernel version 3.2: [netkit-ng-kernel-i386-K3.2.tar.bz2](https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-kernel-i386-K3.2.tar.bz2)
 
@@ -48,7 +48,7 @@ A complete Netkit-NG distribution consists of three different packages:
 Download all the files to the same directory of your choice. Then unpack them by using the following commands:
 
 <pre>
-  tar -xjSf netkit-ng-core-32-3.0.2.tar.bz2
+  tar -xjSf netkit-ng-core-32-3.0.4.tar.bz2
   tar -xjSf netkit-ng-filesystem-i386-F7.0.tar.bz2
   tar -xjSf netkit-ng-kernel-i386-K3.2.tar.bz2
 </pre>
@@ -71,6 +71,11 @@ The simplest way to do it is to run the check configuration script and copy/past
 This script takes care of checking whether your system is configured properly to make Netkit run. Any misconfigurations are signalled and instructions for fixing them are reported as well. If the script exits with success, then Netkit is ready for use.
 
 ## Changes
+
+* Version 3.0.4
+
+    * removing documentation to move it to <http://netkit-ng.github.io/>
+    * fixing build 
 
 * Version 3.0.3
   
