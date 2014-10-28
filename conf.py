@@ -115,7 +115,6 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-#THEME = "bootstrap3"
 THEME = "dinky"
 
 # Below this point, everything is optional
@@ -175,7 +174,7 @@ TIMEZONE = "Europe/Paris"
 #
 
 POSTS = []
-PAGES = [("pages/*.mdown", "", "index.tmpl")]
+PAGES = [("pages/*.mdown", "", "story.tmpl")]
 
 # One or more folders containing files to be copied as-is into the output.
 # The format is a dictionary of "source" "relative destination".
