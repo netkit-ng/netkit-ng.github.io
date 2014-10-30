@@ -10,33 +10,31 @@ What is Netkit-NG
 =================
 
 Netkit-NG is a fork of `the Netkit project`_ to bring 
-new functionnalities and support for recent debian kernels and filesystems. It 
-includes an updated version of `netkit-core` which supports the new fs image 
-format and includes other contributions released by various github users.
+new functionnalities and support for recent debian kernels and filesystems:
+
+* `netkit-ng-build`_ is a set of reusable scripts to build the fs and kernel binaries for Netkit. The solution is based on `rootstrap` (a script to build UML fs maintained by debian team) and the kernels provided by Debian. At the present time, only Wheezy is supported.
+* `netkit-ng-core`_ is an updated version of netkit-core which support the new fs image format and includes other contributions released by various github users.
 
 What is the differences between Netkit-NG and Netkit ?
 ======================================================
 
-Netkit-NG:
+Netkit-NG
+  * filesystem and kernel based on Debian Wheezy
+  * uml_dump support (UML network sniffer without root rights)
+  * The FS and kernel can be rebuild: adding / removing packages and change kernel options are possible
 
-* filesystem and kernel based on Debian Wheezy
-* uml_dump support (UML network sniffer without root rights)
-* The FS and kernel can be rebuild: adding / removing packages and change kernel options are possible
+Netkit
+  * filesystem and kernel based on Debian lenny (deprected since 02/2012)
+  * stable since a long time
+  * includes MPLS patches
 
-Netkit:
-
-* filesystem and kernel based on Debian lenny (deprected since 02/2012)
-* stable since a long time
-* includes MPLS patches
-
-Latest version
+Latest release
 ==============
 
-If you're interested on "ready-to-use" binaries, please install:
-
-* The netkit-NG core version 3.0.4: `netkit-ng-core-32-3.0.4.tar.bz2`_
-* The Netkit-NG filesystem version 7.0: `netkit-ng-filesystem-i386-F7.0.tar.bz2`_
-* The Netkit-NG kernel version 3.2: `netkit-ng-kernel-i386-K3.2.tar.bz2`_
+Binaries (for end-users):
+  * The netkit-NG core version 3.0.4: `netkit-ng-core-32-3.0.4.tar.bz2`_
+  * The Netkit-NG filesystem version 7.0: `netkit-ng-filesystem-i386-F7.0.tar.bz2`_
+  * The Netkit-NG kernel version 3.2: `netkit-ng-kernel-i386-K3.2.tar.bz2`_
 
 Installing Netkit-NG
 ====================
@@ -122,6 +120,8 @@ Version 2.9
     - removing previous uml tools binaries
     - removing obsolete goals in Makefile
 
+.. _`netkit-ng-build`: https://github.com/netkit-ng/netkit-ng-build/
+.. _`netkit-ng-core`: https://github.com/netkit-ng/netkit-ng-core/
 .. _`the Netkit project`: http://www.netkit.org/
 .. _netkit-ng-core-32-3.0.4.tar.bz2: https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.4/netkit-ng-core-32-3.0.4.tar.bz2
 .. _netkit-ng-filesystem-i386-F7.0.tar.bz2: https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-filesystem-i386-F7.0.tar.bz2
