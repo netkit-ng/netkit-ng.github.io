@@ -24,7 +24,7 @@ BLOG_TITLE = "Netkit-NG"  # (translatable)
 SITE_URL = "https://netkit-ng.github.io/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://netkit-ng.github.io/"
+BASE_URL = "https://netkit-ng.github.io/"
 BLOG_EMAIL = "kartoch@gmail.com"
 BLOG_DESCRIPTION = "Netkit reloaded..."  # (translatable)
 
@@ -108,9 +108,9 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/index.html", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/index.html", "Home"),
+        ("/umldump.html", "Uml dump"),
+        ("/extending.html", "Extending"),
     ),
 }
 
