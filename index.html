@@ -1,160 +1,176 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Netkit-ng by netkit-ng</title>
-
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/pygment_trac.css">
-    <script src="assets/js/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Netkit-NG Homepage | Netkit-NG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header id="main-header">
-        <h1 class="header">Netkit-ng</h1> 
-        <p class="header">Netkit reloaded</p>
-        <ul>
-          <li><a class="buttons github" href="https://github.com/netkit-ng">GitHub Profile</a></li>
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Netkit-NG</a>
+       </div>
+     </div>
+   </div>
+
+   <div class="container">
+    <div class="row row-offcanvas row-offcanvas-left">
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
         </ul>
-      </header>
-      <section>
-      
-<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
-    <header>
+      </div>  	
+      <div class="col-xs-12 col-sm-9">
+        <h1>Netkit-NG Homepage</h1>
         
-    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Netkit-NG Homepage</a></h1>
-
-        
-
-    </header>
-    <div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<h3>What is Netkit-NG</h3>
-<p>Netkit-NG is a fork of <a href="http://www.netkit.org/">the Netkit project</a> to bring 
-new functionnalities and support for recent debian kernels and filesystems. It 
-includes an updated version of <code>netkit-core</code> which supports the new fs image 
+            <div>
+<div class="section" id="what-is-netkit-ng">
+<h2>What is Netkit-NG</h2>
+<p>Netkit-NG is a fork of <a class="reference external" href="http://www.netkit.org/">the Netkit project</a> to bring
+new functionnalities and support for recent debian kernels and filesystems. It
+includes an updated version of <cite>netkit-core</cite> which supports the new fs image
 format and includes other contributions released by various github users.</p>
-<h3>What is the differences between Netkit-NG and Netkit ?</h3>
+</div>
+<div class="section" id="what-is-the-differences-between-netkit-ng-and-netkit">
+<h2>What is the differences between Netkit-NG and Netkit ?</h2>
 <p>Netkit-NG:</p>
-<ul>
+<ul class="simple">
 <li>filesystem and kernel based on Debian Wheezy</li>
 <li>uml_dump support (UML network sniffer without root rights)</li>
 <li>The FS and kernel can be rebuild: adding / removing packages and change kernel options are possible</li>
 </ul>
 <p>Netkit:</p>
-<ul>
+<ul class="simple">
 <li>filesystem and kernel based on Debian lenny (deprected since 02/2012)</li>
 <li>stable since a long time</li>
 <li>includes MPLS patches</li>
 </ul>
-<h3>Latest version</h3>
+</div>
+<div class="section" id="latest-version">
+<h2>Latest version</h2>
 <p>If you're interested on "ready-to-use" binaries, please install:</p>
-<ul>
-<li>The netkit-NG core version 3.0.4: <a href="https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.4/netkit-ng-core-32-3.0.4.tar.bz2">netkit-ng-core-32-3.0.4.tar.bz2</a>
+<ul class="simple">
+<li>The netkit-NG core version 3.0.4: <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-core/releases/download/3.0.4/netkit-ng-core-32-3.0.4.tar.bz2">netkit-ng-core-32-3.0.4.tar.bz2</a>
 </li>
-<li>The Netkit-NG filesystem version 7.0: <a href="https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-filesystem-i386-F7.0.tar.bz2">netkit-ng-filesystem-i386-F7.0.tar.bz2</a>
+<li>The Netkit-NG filesystem version 7.0: <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-filesystem-i386-F7.0.tar.bz2">netkit-ng-filesystem-i386-F7.0.tar.bz2</a>
 </li>
-<li>The Netkit-NG kernel version 3.2: <a href="https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-kernel-i386-K3.2.tar.bz2">netkit-ng-kernel-i386-K3.2.tar.bz2</a>
+<li>The Netkit-NG kernel version 3.2: <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-build/releases/download/0.1.2/netkit-ng-kernel-i386-K3.2.tar.bz2">netkit-ng-kernel-i386-K3.2.tar.bz2</a>
 </li>
 </ul>
-<h3>Installing Netkit-NG</h3>
-<p>A complete Netkit-NG distribution consists of three different packages:
-<em> the Netkit-NG "core", which contains commands, documentation and other stuff
-  which is necessary for Netkit to work;
-</em> the Netkit-NG filesystem, which contains the filesystem for virtual machines;
-* the Netkit-NG kernel, which contains the kernel used by virtual machines.</p>
-<h4>Step 1: Download and unpack</h4>
+</div>
+<div class="section" id="installing-netkit-ng">
+<h2>Installing Netkit-NG</h2>
+<p>A complete Netkit-NG distribution consists of three different packages:</p>
+<ul class="simple">
+<li>the Netkit-NG "core", which contains commands, documentation and other stuff which is necessary for Netkit to work;</li>
+<li>the Netkit-NG filesystem, which contains the filesystem for virtual machines;</li>
+<li>the Netkit-NG kernel, which contains the kernel used by virtual machines.</li>
+</ul>
+<div class="section" id="step-1-download-and-unpack">
+<h3>Step 1: Download and unpack</h3>
 <p>Download all the files to the same directory of your choice. Then unpack them by using the following commands:</p>
-<pre>
-  tar -xjSf netkit-ng-core-32-3.0.4.tar.bz2
-  tar -xjSf netkit-ng-filesystem-i386-F7.0.tar.bz2
-  tar -xjSf netkit-ng-kernel-i386-K3.2.tar.bz2
+<pre class="code sh literal-block">
+<span class="nv">$ </span>tar -xjSf netkit-ng-core-32-3.0.4.tar.bz2
+<span class="nv">$ </span>tar -xjSf netkit-ng-filesystem-i386-F7.0.tar.bz2
+<span class="nv">$ </span>tar -xjSf netkit-ng-kernel-i386-K3.2.tar.bz2
 </pre>
-
-<h4>Step2: Configuration</h4>
+</div>
+<div class="section" id="step2-configuration">
+<h3>Step2: Configuration</h3>
 <p>The first step is to set the environment variables:</p>
-<ul>
+<ul class="simple">
 <li>
-<code>NETKIT_HOME</code> variable to the name of the directory Netkit has been installed into. </li>
+<cite>NETKIT_HOME</cite> variable to the name of the directory Netkit has been installed into.</li>
 <li>
-<code>MANPATH</code> variable must be set to <code>$NETKIT_HOME/man</code>
+<cite>MANPATH</cite> variable must be set to <cite>$NETKIT_HOME/man</cite>
 </li>
 <li>
-<code>PATH</code> environment variable must include <code>$NETKIT_HOME/bin</code>
+<cite>PATH</cite> environment variable must include <cite>$NETKIT_HOME/bin</cite>
 </li>
 </ul>
-<p>The simplest way to do it is to run the check configuration script and copy/paste the recommandations. Run the <code>check_configuration.sh' script in the</code>netkit-ng` directory by typing:</p>
-<pre>
-  ./check_configuration.sh
+<p>The simplest way to do it is to run the check configuration script and copy/paste the recommandations. Run the <cite>check_configuration.sh' script in the `netkit-ng</cite> directory by typing:</p>
+<pre class="code sh literal-block">
+<span class="nv">$ </span>./check_configuration.sh
 </pre>
-
 <p>This script takes care of checking whether your system is configured properly to make Netkit run. Any misconfigurations are signalled and instructions for fixing them are reported as well. If the script exits with success, then Netkit is ready for use.</p>
+</div>
+<div class="section" id="changes">
 <h3>Changes</h3>
-<ul>
-<li>
-<p>Version 3.0.4</p>
-<ul>
-<li>removing documentation to move it to <a href="http://netkit-ng.github.io/">http://netkit-ng.github.io/</a>
+<dl class="docutils">
+<dt>Version 3.0.4</dt>
+<dd>
+<ul class="first last simple">
+<li>removing documentation to move it to <a class="reference external" href="http://netkit-ng.github.io/">http://netkit-ng.github.io/</a>
 </li>
-<li>fixing build </li>
+<li>fixing build</li>
 </ul>
-</li>
-<li>
-<p>Version 3.0.3</p>
-<ul>
+</dd>
+<dt>Version 3.0.3</dt>
+<dd>
+<ul class="first last simple">
 <li>Fix #3: check-configuration script returns warning about parse file not supported on ext4</li>
-<li>force <code>LANG_C</code> to all scripts to avoid internationalization errors</li>
+<li>force <cite>LANG_C</cite> to all scripts to avoid internationalization errors</li>
 <li>Fix #4: Missing dynamic library dependency when calling vhalt</li>
 <li>Add tests to check if filesystem supports sparse file for FS and model FS</li>
 </ul>
-</li>
-<li>
-<p>Version 3.0.2</p>
-<ul>
+</dd>
+<dt>Version 3.0.2</dt>
+<dd>
+<ul class="first last simple">
 <li>archive name and directory start with netkit-ng to avoid clash with original netkit</li>
 </ul>
-</li>
-<li>
-<p>Version 3.0.1</p>
-<ul>
-<li>fixing error during <code>README.mdown</code> copy into archive during build</li>
+</dd>
+<dt>Version 3.0.1</dt>
+<dd>
+<ul class="first last simple">
+<li>fixing error during <cite>README.mdown</cite> copy into archive during build</li>
 </ul>
-</li>
-<li>
-<p>Version 3.0</p>
-<ul>
+</dd>
+<dt>Version 3.0</dt>
+<dd>
+<ul class="first last simple">
 <li>switching to new major version, as scripts are now expecting new fs organization</li>
 <li>moving console profile to tools directory</li>
 </ul>
-</li>
-<li>
-<p>Version 2.12</p>
-<ul>
+</dd>
+<dt>Version 2.12</dt>
+<dd>
+<ul class="first last simple">
 <li>uml tools patches are included in git from now</li>
 <li>moving to new root filesystem from netkit-uml-build</li>
 </ul>
-</li>
-<li>
-<p>Version 2.11</p>
-<ul>
+</dd>
+<dt>Version 2.11</dt>
+<dd>
+<ul class="first last simple">
 <li>It is now possible to run only bin/manage_tuntap script via sudo, not /bin/sh. (sv75)</li>
 </ul>
-</li>
-<li>
-<p>Version 2.10</p>
-<ul>
+</dd>
+<dt>Version 2.10</dt>
+<dd>
+<ul class="first last simple">
 <li>support for 32 and 64 bits architecture for UML tools</li>
 <li>add binary check during check_configuration.d (to detect problem when the user install the wrong version of netkit in respect of his host architecture).</li>
 </ul>
-</li>
-<li>
-<p>Version 2.9</p>
-<ul>
+</dd>
+<dt>Version 2.9</dt>
+<dd>
+<ul class="first last simple">
 <li>renaming vconfig to vconf (zioproto)</li>
 <li>support for connection mconsole (babazka)</li>
 <li>support for vdump (via uml_dump): small utility to connect wireshark or tcpdump directly to a uml_switch</li>
@@ -167,30 +183,18 @@ format and includes other contributions released by various github users.</p>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
+</dd>
+</dl>
 </div>
+</div>
+</div>
+        
+      </div>
     </div>
-    
-
-</article>
-
-      </section>
-      <footer id="main-footer">
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-                  <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-45124358-3");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-  </body>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</div>
+</body>
 </html>
