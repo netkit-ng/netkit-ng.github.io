@@ -109,8 +109,9 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/index.html", "Home"),
-        ("/umldump.html", "Uml dump"),
-        ("/extending.html", "Extending"),
+        ("/core.html", "Extending core"),
+        ("/build.html", "Extending fs and kernel build"),        
+        ("/umldump.html", "uml_dump"),
     ),
 }
 
