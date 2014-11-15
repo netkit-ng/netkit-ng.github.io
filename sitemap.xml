@@ -5,15 +5,19 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://netkit-ng.github.io/extending.html</loc>
-  <lastmod>2014-10-30</lastmod>
+  <loc>https://netkit-ng.github.io/build.html</loc>
+  <lastmod>2014-11-15</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core.html</loc>
+  <lastmod>2014-11-15</lastmod>
  </url>
  <url>
   <loc>https://netkit-ng.github.io/index.html</loc>
-  <lastmod>2014-10-30</lastmod>
+  <lastmod>2014-11-15</lastmod>
  </url>
  <url>
   <loc>https://netkit-ng.github.io/umldump.html</loc>
-  <lastmod>2014-10-30</lastmod>
+  <lastmod>2014-11-15</lastmod>
  </url>
 </urlset>

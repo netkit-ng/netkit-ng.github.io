@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>UML-dump | Netkit-NG</title>
+  <title>uml_dump | Netkit-NG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -34,31 +34,36 @@
         <ul class="nav">
           
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="#">Uml dump</a></li>
-                <li><a href="extending.html">Extending</a></li>
+                <li><a href="core.html">Extending core</a></li>
+                <li><a href="build.html">Extending fs and kernel build</a></li>
+                <li class="active"><a href="#">uml_dump</a></li>
 
           
         </ul>
       </div>  	
       <div class="col-xs-12 col-sm-9">
-        <h1>UML-dump</h1>
+        <h1>uml_dump</h1>
         
             <div>
 <p>Netkit-NG includes support for <cite>uml_dump</cite>.</p>
-<p><cite>uml_dump</cite> is a program for UML tools (various tools to connect several User-mode Linux instances
-together) developed by Julien Iguchi-Cartigny and two students (Jean-Baptiste Machemie and Benoit
-Bitarelle) during Spring 2009. It dumps packets from the virtual switch (<cite>uml_switch</cite>) using CAP
-format to the standard output. Thus, it is possible to see packets exchanged between UML machines in any CAP
-viewer (for instance wireshark or tcpdump) or save packets in a file.</p>
-<p>It was already possible to dump packet using the original Netkit but it requires root access and
-TUN/TAP tunnels (not very useful using shared Linux computers).</p>
+<p><cite>uml_dump</cite> is a program for UML tools (various tools to connect several
+User-mode Linux instances together) developed by Julien Iguchi-Cartigny and
+two students (Jean-Baptiste Machemie and Benoit Bitarelle) during Spring 2009.
+It dumps packets from the virtual switch (<cite>uml_switch</cite>) using CAP format to
+the standard output. Thus, it is possible to see packets exchanged between UML
+machines in any CAP viewer (for instance wireshark or tcpdump) or save packets
+in a file.</p>
+<p>It was already possible to dump packet using the original Netkit but it
+requires root access and TUN/TAP tunnels (not very useful using shared Linux
+computers).</p>
 <div class="section" id="usage">
 <h2>Usage</h2>
 <pre class="code sh literal-block">
 <span class="nv">$ </span>vdump switch_name
 </pre>
-<p>Where <cite>switch_name</cite> is the network id shared between machines using the same collision domain in
-Netkit. For instance, to dump all packet from the network A and print them using wireshark:</p>
+<p>Where <cite>switch_name</cite> is the network id shared between machines using the same
+collision domain in Netkit. For instance, to dump all packet from the network
+A and print them using wireshark:</p>
 <pre class="code sh literal-block">
 <span class="nv">$ </span>vdump A | wireshark -i - -k
 </pre>
@@ -66,8 +71,8 @@ Netkit. For instance, to dump all packet from the network A and print them using
 <pre class="code sh literal-block">
 <span class="nv">$ </span>uml_dump fifo
 </pre>
-<p>where fifo is the named pipe to connect to the <cite>uml_switch</cite> instance. If omitted <cite>/tmp/uml.ctl</cite>
-is used.</p>
+<p>where fifo is the named pipe to connect to the <cite>uml_switch</cite> instance. If
+omitted <cite>/tmp/uml.ctl</cite> is used.</p>
 </div>
 </div>
         

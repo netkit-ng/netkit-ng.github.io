@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Extending Netkit-NG Kernel and Filesystem | Netkit-NG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="https://netkit-ng.github.io/">Netkit-NG</a>
+       </div>
+     </div>
+   </div>
+
+   <div class="container">
+    <div class="row row-offcanvas row-offcanvas-left">
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        <ul class="nav">
+          
+                <li><a href="index.html">Home</a></li>
+                <li><a href="core.html">Extending core</a></li>
+                <li class="active"><a href="#">Extending fs and kernel build</a></li>
+                <li><a href="umldump.html">uml_dump</a></li>
+
+          
+        </ul>
+      </div>  	
+      <div class="col-xs-12 col-sm-9">
+        <h1>Extending Netkit-NG Kernel and Filesystem</h1>
+        
+            <div>
+<div class="section" id="get-the-sources">
+<h2>Get the sources</h2>
+<p>On Github: <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-build/">netkit-ng-build</a> (latest version is 0.1.3)</p>
+<p>Master branch contains the latest stable release. Develop branch is to push
+new features or fixing bugs.</p>
+</div>
+<div class="section" id="build-netkit-ng-core-from-sources">
+<h2>Build netkit-ng-core from sources</h2>
+<p>It is recommended to build the kernal and fs on a non-critical VM running a
+fresh install of Debian wheezy, as the install requires root rights.</p>
+<p>To build the fs and kernel, you need to configure NAT as rootstrap builds the
+filesystem inside an UML VM:</p>
+<pre class="code sh literal-block">
+<span class="nv">$ </span>iptables -j MASQUERADE -t nat -o eth0 -A POSTROUTING
+</pre>
+<p>Then:</p>
+<pre class="code sh literal-block">
+<span class="nv">$ </span>git clone git@github.com:netkit-ng/netkit-ng-build.git
+<span class="nv">$ </span><span class="nb">cd </span>netkit-ng-build
+<span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>make
+</pre>
+</div>
+<div class="section" id="add-a-debian-package-in-the-filesystem">
+<h2>Add a debian package in the filesystem</h2>
+<p>The list of installed packages (beside base packages) are listed int the
+<a class="reference external" href="https://github.com/netkit-ng/netkit-ng-build/blob/master/fs/packages-list">packages-list</a> file:</p>
+<ul class="simple">
+<li>Add your new applications into the file <cite>package-list</cite> of the <cite>fs</cite> directory</li>
+<li>Add the daemon name into the file <cite>disabled-services</cite> of the <cite>fs</cite> directory
+(to disable it at boot)</li>
+<li>Build the fs with <cite>make fs</cite>
+</li>
+</ul>
+</div>
+<div class="section" id="add-a-new-file-or-modify-a-file-in-the-filesystem">
+<h2>Add a new file or modify a file in the filesystem</h2>
+<ul class="simple">
+<li>Add the file in the 'fs/filesystem-tweaks'</li>
+<li>Build the fs with <cite>make fs</cite>
+</li>
+</ul>
+</div>
+<div class="section" id="bugs-help">
+<h2>Bugs, help...</h2>
+<ul class="simple">
+<li>Search for help in channel #netkit on freenode.</li>
+<li>If you want to contribute, please fork the 'develop' branch and request
+pulls.</li>
+<li>Report bug on the <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-build/issues">netkit-ng-build bug tracker</a>
+</li>
+</ul>
+</div>
+<div class="section" id="changes">
+<h2>Changes</h2>
+<dl class="docutils">
+<dt>Version 0.1.3</dt>
+<dd>
+<ul class="first last simple">
+<li>Moving documentation to <a class="reference external" href="https://netkit-ng.github.io">https://netkit-ng.github.io</a>
+</li>
+<li>replace openswan by strongswan</li>
+<li>add xl2tpd to packages list</li>
+<li>fix ppp add in packages list</li>
+<li>add version to archive name</li>
+</ul>
+</dd>
+<dt>Version 0.1.2</dt>
+<dd>
+<ul class="first last simple">
+<li>enable networking init.d at startup</li>
+</ul>
+</dd>
+<dt>Version 0.1.1</dt>
+<dd>
+<ul class="first last simple">
+<li>disable lvm2 asinit.d service</li>
+<li>remove lvm2 from packages-list</li>
+<li>directory is now <cite>netkit-ng</cite>
+</li>
+<li>add lxc and openswan</li>
+</ul>
+</dd>
+<dt>Version 0.1.1</dt>
+<dd>
+<ul class="first last simple">
+<li>first release</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+        
+      </div>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-45124358-3', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</div>
+</body>
+</html>
