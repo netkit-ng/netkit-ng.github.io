@@ -5,19 +5,71 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>https://netkit-ng.github.io/build-010.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/build-011.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/build-012.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/build-013.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
   <loc>https://netkit-ng.github.io/build.html</loc>
-  <lastmod>2014-11-15</lastmod>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-2100.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-2110.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-2120.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-290.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-300.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-301.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-302.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-303.html</loc>
+  <lastmod>2014-11-16</lastmod>
+ </url>
+ <url>
+  <loc>https://netkit-ng.github.io/core-304.html</loc>
+  <lastmod>2014-11-16</lastmod>
  </url>
  <url>
   <loc>https://netkit-ng.github.io/core.html</loc>
-  <lastmod>2014-11-15</lastmod>
+  <lastmod>2014-11-16</lastmod>
  </url>
  <url>
   <loc>https://netkit-ng.github.io/index.html</loc>
-  <lastmod>2014-11-15</lastmod>
+  <lastmod>2014-11-16</lastmod>
  </url>
  <url>
   <loc>https://netkit-ng.github.io/umldump.html</loc>
-  <lastmod>2014-11-15</lastmod>
+  <lastmod>2014-11-16</lastmod>
  </url>
 </urlset>

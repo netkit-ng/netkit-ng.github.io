@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>Extending Netkit-NG Core | Netkit-NG</title>
+  <title>netkit-ng-core 3.0.3 | Netkit-NG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
         <ul class="nav">
           
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="#">Extending core</a></li>
+                <li><a href="core.html">Extending core</a></li>
                 <li><a href="build.html">Extending fs and kernel build</a></li>
                 <li><a href="umldump.html">uml_dump</a></li>
 
@@ -43,89 +43,26 @@
         </ul>
       </div>  	
       <div class="col-xs-12 col-sm-9">
-        <h1>Extending Netkit-NG Core</h1>
+        <h1>netkit-ng-core 3.0.3</h1>
         
             <div>
-<div class="section" id="get-the-sources">
-<h2>Get the sources</h2>
-<p>On Github: <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-core/">netkit-ng-core</a> (latest version is 3.0.4)</p>
-<p>Master branch contains the latest stable release. Develop branch is to push
-new features or fixing bugs.</p>
-</div>
-<div class="section" id="build-netkit-ng-core-from-sources">
-<h2>Build netkit-ng-core from sources</h2>
-<p>To build the netkit-core archive:</p>
-<pre class="code sh literal-block">
-<span class="nv">$ </span>git clone git@github.com:netkit-ng/netkit-ng-core.git
-<span class="nv">$ </span><span class="nb">cd </span>netkit-core
-<span class="nv">$ </span>git checkout master
-<span class="nv">$ </span>make package
-</pre>
-</div>
-<div class="section" id="bugs-help">
-<h2>Bugs, help...</h2>
 <ul class="simple">
-<li>Search for help in channel #netkit on freenode.</li>
-<li>If you want to contribute, please fork the 'develop' branch and request
-pulls.</li>
-<li>Report bug on the <a class="reference external" href="https://github.com/netkit-ng/netkit-ng-core/issues">netkit-ng-core bug tracker</a>
-</li>
+<li>Fix <a href="core-303.html#id1"><span class="problematic" id="id2">`#3&lt;https://github.com/netkit-ng/netkit-ng-core/issues/3&gt;`_</span></a>:
+check-configuration script returns warning about parse file not supported
+on ext4</li>
+<li>force <cite>LANG_C</cite> to all scripts to avoid internationalization errors</li>
+<li>Fix <a href="core-303.html#id3"><span class="problematic" id="id4">`#4&lt;https://github.com/netkit-ng/netkit-ng-core/issues/4&gt;`_</span></a>: Missing
+dynamic library dependency when calling vhalt</li>
+<li>Add tests to check if filesystem supports sparse file for FS and model FS</li>
 </ul>
-</div>
-<div class="section" id="history">
-<h2>History</h2>
-
-<!-- Begin post-list post_list_275d2615c95b4804a68a3dc7da6c0879 -->
-<div id="post_list_275d2615c95b4804a68a3dc7da6c0879" class="post-list">
-    <ul class="post-list">
-            <li class="post-list-item">
-	        2014-09-28
-		 
-		<a href="core-304.html">netkit-ng-core 3.0.4</a>
-	    </li>
-            <li class="post-list-item">
-	        2014-09-26
-		 
-		<a href="core-303.html">netkit-ng-core 3.0.3</a>
-	    </li>
-            <li class="post-list-item">
-	        2014-05-23
-		 
-		<a href="core-302.html">netkit-ng-core 3.0.2</a>
-	    </li>
-            <li class="post-list-item">
-	        2014-05-21
-		 
-		<a href="core-301.html">netkit-ng-core 3.0.1</a>
-	    </li>
-            <li class="post-list-item">
-	        2014-05-21
-		 
-		<a href="core-300.html">netkit-ng-core 3.0.0</a>
-	    </li>
-            <li class="post-list-item">
-	        2014-05-04
-		 
-		<a href="core-2100.html">netkit-ng-core 2.10.0</a>
-	    </li>
-            <li class="post-list-item">
-	        2014-03-28
-		 
-		<a href="core-2120.html">netkit-ng-core 2.12.0</a>
-	    </li>
-            <li class="post-list-item">
-	        2013-05-06
-		 
-		<a href="core-2110.html">netkit-ng-core 2.11.0</a>
-	    </li>
-            <li class="post-list-item">
-	        2013-04-25
-		 
-		<a href="core-290.html">netkit-ng-core 2.9.0</a>
-	    </li>
-    </ul>
-</div>
-<!-- End post-list post_list_275d2615c95b4804a68a3dc7da6c0879 -->
+<div class="system-messages section">
+<h2>Docutils System Messages</h2>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 1); <em><a href="core-303.html#id2">backlink</a></em></p>
+Unknown target name: "#3&lt;https://github.com/netkit-ng/netkit-ng-core/issues/3&gt;".</div>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 5); <em><a href="core-303.html#id4">backlink</a></em></p>
+Unknown target name: "#4&lt;https://github.com/netkit-ng/netkit-ng-core/issues/4&gt;".</div>
 </div>
 </div>
         
