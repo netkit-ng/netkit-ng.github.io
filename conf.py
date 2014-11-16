@@ -17,7 +17,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Julien \"Kartoch\" Iguchi-Cartigny"  # (translatable)
+BLOG_AUTHOR = "Julien \'Kartoch\' Iguchi-Cartigny"  # (translatable)
 BLOG_TITLE = "Netkit-NG"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
@@ -110,13 +110,13 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/index.html", "Home"),
         ("/core.html", "Extending core"),
-        ("/build.html", "Extending fs and kernel build"),        
+        ("/build.html", "Extending fs and kernel build"),
         ("/umldump.html", "uml_dump"),
     ),
 }
 
 # Name of the theme to use.
-THEME = "netkit"
+THEME = "kartoch"
 
 # Below this point, everything is optional
 
@@ -329,12 +329,12 @@ GITHUB_REMOTE_NAME = 'origin'
 # Many filters are shipped with Nikola. A list is available in the manual:
 # <http://getnikola.com/handbook.html#post-processing-filters>
 #
-# from nikola import filters
-# FILTERS = {
-#    ".html": [filters.typogrify],
+from nikola import filters
+FILTERS = {
+    ".html": [filters.typogrify],
 #    ".js": [filters.closure_compiler],
 #    ".jpg": ["jpegoptim --strip-all -m75 -v %s"],
-# }
+}
 
 # Expert setting! Create a gzipped copy of each generated file. Cheap server-
 # side optimization for very high traffic sites or low memory servers.
@@ -585,26 +585,14 @@ COMMENT_SYSTEM_ID = ""
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
 # (translatable)
-# SOCIAL_BUTTONS_CODE = """
-# <!-- Social buttons -->
-# <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
-# <a class="addthis_button_more">Share</a>
-# <ul><li><a class="addthis_button_facebook"></a>
-# <li><a class="addthis_button_google_plusone_share"></a>
-# <li><a class="addthis_button_linkedin"></a>
-# <li><a class="addthis_button_twitter"></a>
-# </ul>
-# </div>
-# <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
-# <!-- End of social buttons -->
-# """
+SOCIAL_BUTTONS_CODE = ""
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
-# COPY_SOURCES = True
+COPY_SOURCES = False
 
 # Modify the number of Post per Index Page
 # Defaults to 10
@@ -666,7 +654,7 @@ COMMENT_SYSTEM_ID = ""
 # bootstrap is served from the NetDNA CDN
 # Set this to False if you want to host your site without requiring access to
 # external resources.
-# USE_CDN = False
+USE_CDN = True
 
 # Extra things you want in the pages HEAD tag. This will be added right
 # before </head>
@@ -675,7 +663,18 @@ COMMENT_SYSTEM_ID = ""
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-# BODY_END = ""
+BODY_END = """
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-45124358-3', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+"""
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
@@ -694,7 +693,7 @@ COMMENT_SYSTEM_ID = ""
 
 # If you hate "Filenames with Capital Letters and Spaces.md", you should
 # set this to true.
-UNSLUGIFY_TITLES = True
+# UNSLUGIFY_TITLES = True
 
 # Additional metadata that is added to a post when creating a new_post
 # ADDITIONAL_METADATA = {}
@@ -727,7 +726,7 @@ UNSLUGIFY_TITLES = True
 # }
 
 # If webassets is installed, bundle JS and CSS to make site loading faster
-# USE_BUNDLES = True
+USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)
 DISABLED_PLUGINS = ["render_galleries","render_tags","render_indexes",
@@ -786,4 +785,6 @@ LOGGING_HANDLERS = {
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+GLOBAL_CONTEXT = {
+    'has_custom_css': True
+}
