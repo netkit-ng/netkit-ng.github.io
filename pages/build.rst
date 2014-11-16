@@ -59,27 +59,11 @@ Bugs, help...
   pulls.
 * Report bug on the `netkit-ng-build bug tracker`_
 
-Changes
+History
 =======
 
-Version 0.1.3
-  * Moving documentation to https://netkit-ng.github.io
-  * replace openswan by strongswan
-  * add xl2tpd to packages list
-  * fix ppp add in packages list
-  * add version to archive name
-
-Version 0.1.2
-  * enable networking init.d at startup
-
-Version 0.1.1
-  * disable lvm2 asinit.d service
-  * remove lvm2 from packages-list
-  * directory is now `netkit-ng`
-  * add lxc and openswan
-
-Version 0.1.1
-  * first release
+.. post-list::
+   :tags: build
 
 .. _`netkit-ng-build`: https://github.com/netkit-ng/netkit-ng-build/
 .. _`packages-list`: https://github.com/netkit-ng/netkit-ng-build/blob/master/fs/packages-list

@@ -136,7 +136,7 @@ TIMEZONE = "Europe/Paris"
 
 # Date format used to display post dates.
 # (str used by datetime.datetime.strftime)
-# DATE_FORMAT = '%Y-%m-%d %H:%M'
+DATE_FORMAT = '%Y-%m-%d'
 
 # While nikola can select a sensible locale for each language,
 # sometimes explicit control can come handy.
@@ -174,7 +174,7 @@ TIMEZONE = "Europe/Paris"
 # just independent HTML pages.
 #
 
-POSTS = []
+POSTS = [("posts/*.rst", "", "story.tmpl")]
 PAGES = [("pages/*.rst", "", "story.tmpl")]
 
 # One or more folders containing files to be copied as-is into the output.

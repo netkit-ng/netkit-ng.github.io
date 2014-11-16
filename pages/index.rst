@@ -31,14 +31,11 @@ Netkit
   * stable since a long time
   * includes MPLS patches
 
-Latest release
-==============
+Latest releases
+===============
 
-* The netkit-NG core version 3.0.4: `netkit-ng-core-32-3.0.4.tar.bz2`_
-* The Netkit-NG filesystem version 7.0 based on netkit-ng-build version 0.1.3: 
-  `netkit-ng-filesystem-i386-F7.0-0.1.3.tar.bz2`_
-* The Netkit-NG kernel version 3.2 based on netkit-ng-build version 0.1.3: 
-  `netkit-ng-kernel-i386-K3.2-0.1.3.tar.bz2`_
+.. post-list::
+   :stop: 5
 
 Installing Netkit-NG
 ====================
@@ -53,8 +50,16 @@ A complete Netkit-NG distribution consists of three different packages:
 Step 1: Download and unpack
 ---------------------------
 
-Download all the files to the same directory of your choice. Then unpack them 
-by using the following commands:
+Download all the files to the same directory of your choice:
+
+* The netkit-NG core version 3.0.4: `netkit-ng-core-32-3.0.4.tar.bz2`_
+* The Netkit-NG filesystem version 7.0 based on netkit-ng-build version 0.1.3: 
+  `netkit-ng-filesystem-i386-F7.0-0.1.3.tar.bz2`_
+* The Netkit-NG kernel version 3.2 based on netkit-ng-build version 0.1.3: 
+  `netkit-ng-kernel-i386-K3.2-0.1.3.tar.bz2`_
+
+
+Then unpack them by using the following commands:
 
 .. code-block:: sh
 
